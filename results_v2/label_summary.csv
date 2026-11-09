@@ -1,0 +1,5 @@
+dataset,accuracy,continue,energy,stop_share_%
+cifar10,572,461,167,61.583333333333336
+fashionmnist,432,768,0,36.0
+mnist,687,513,0,57.25
+svhn,880,197,123,83.58333333333333

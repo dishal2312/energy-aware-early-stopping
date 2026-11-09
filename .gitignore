@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+
+# Downloaded datasets (re-downloaded automatically by the scripts)
+data/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Folder created by the Claude desktop app
+Claude outputs/
