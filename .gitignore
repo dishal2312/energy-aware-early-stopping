@@ -11,5 +11,12 @@ __pycache__/
 # macOS
 .DS_Store
 
-# Folder created by the Claude desktop app
+# Scratch folder
 Claude outputs/
+
+# Private notes (not published)
+CHANGES.md
+
+# Local-only archive (only archive/scripts_before_fixes/ is published)
+archive/results_before_fixes/
+archive/first_run/

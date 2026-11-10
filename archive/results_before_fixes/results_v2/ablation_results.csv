@@ -1,3 +1,0 @@
-Condition,Features Used,Classification Accuracy,Avg Stopping Accuracy (mean),Avg Stopping Accuracy (std)
-With energy features,16,0.871,0.754,0.258
-Without energy features,12,0.877,0.755,0.258

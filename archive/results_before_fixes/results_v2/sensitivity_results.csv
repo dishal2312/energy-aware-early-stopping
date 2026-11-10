@@ -1,5 +1,0 @@
-Threshold,Threshold Value,Avg Accuracy,Avg Epochs,Energy Saved (%)
-0.1%,0.001,0.7563,8.5,85.9
-0.5% (default),0.005,0.7537,5.4,88.4
-1.0%,0.01,0.7488,3.8,91.3
-2.0%,0.02,0.7416,2.4,93.1

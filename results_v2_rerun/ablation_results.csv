@@ -1,3 +1,0 @@
-Condition,Features,Classification Accuracy,"Acc Drop (pp, mean)","Energy Saved (%, mean)",Avg Epochs
-With energy features,17,0.8283333333333334,0.029625000000001046,63.426506354348206,10.925
-Without energy features,12,0.8308333333333333,0.06525000000000045,65.64359890960161,10.2625
