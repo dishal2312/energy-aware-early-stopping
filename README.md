@@ -41,18 +41,25 @@ An original MNIST-only version (`step1_baseline_training.py`, `step2_decision_mo
 | | |
 |---|---|
 | Machine | MacBook Pro, Apple M2 (model identifier `Mac14,7`) |
-| Python | 3.13.9 |
+| Python | 3.13.9 (developed and tested); **3.12 or newer is required** by the pinned numpy 2.5.0 and scipy 1.18.0 |
 | Packages | pinned in `requirements.txt` (torch 2.12.1, torchvision 0.27.1, numpy 2.5.0, pandas 3.0.3, scikit-learn 1.9.0, scipy 1.18.0, matplotlib 3.11.0, codecarbon 3.2.8) |
 | Compute | CPU. The scripts use CUDA when available; the logged epoch times (about 3 s per MNIST epoch, 30 s for CIFAR-10, 68 s for SVHN) are consistent with the laptop CPU, not a GPU. |
 | Duration | first run: the 160 extended runs took about 70 hours. Re-run with the fixed Step 1: about 2 hours for the 80 MLP runs and about 16 hours for the 80 CNN runs (6.2 h CIFAR-10, 9.5 h SVHN of training time) |
 
 ```bash
-git clone <repository-url>
-cd <repository>
-python -m venv venv
-source venv/bin/activate
+git clone https://github.com/dishal2312/energy-aware-early-stopping.git
+cd energy-aware-early-stopping
+python3 -m venv venv
+source venv/bin/activate          # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+Notes on installing:
+
+- **Python 3.12 or newer** is needed (see the table above). On an older Python, `pip` will report that no matching versions exist.
+- **Step 2 only needs** numpy, pandas, scikit-learn, scipy and matplotlib. `torch` and `torchvision` are needed only for Step 1 (training), so if you just want to reproduce the results tables you can skip them: install the other lines of `requirements.txt` and run `code/step2_v2.py`.
+- **Download size.** On Linux, `pip install torch` pulls the CUDA build together with about 3 GB of NVIDIA libraries. For a smaller CPU-only install, install `torch` and `torchvision` first from the CPU index at https://pytorch.org, then the rest of `requirements.txt`. On macOS and Windows the default build is small.
+- **Platforms.** The logs were produced on a Mac. Real power measurement uses the macOS tool `powermetrics` (see section 6). On other systems Step 1 still runs, but energy is estimated by CodeCarbon.
 
 ## 3. Running the code
 
